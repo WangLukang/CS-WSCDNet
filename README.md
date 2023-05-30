@@ -14,15 +14,15 @@
 - Use `npy.py` to generate the required training NPY and TXT files.
 
 ### Step 2: Train a CAM model.
-- Use the `train_cam` and `train_recam` scripts in the `step` folder to train a change Class Activation Map (CAM) model.
+- Use the `train_cam.py` and `train_recam.py` scripts in the `step` folder to train a change Class Activation Map (CAM) model.
 
 ### Step 3: Convert CAM to initial pseudo-labels.
-- Use the `cam_to_ir_label` and `cam_to_label` scripts in the `step` folder to convert the CAM outputs to initial pseudo-labels.
-- DenseCRF is used for post-processing. Please note that the pseudo-labels might not be accurate if the class assignments are randomized. You can modify `cam_to_label` to assign the correct label as 255.
+- Use the `cam_to_ir_label.py` and `cam_to_label.py` scripts in the `step` folder to convert the CAM outputs to initial pseudo-labels.
+- DenseCRF is used for post-processing. Please note that the pseudo-labels might not be accurate if the class assignments are randomized. You can modify `cam_to_label.py` to assign the correct label as 255.
 
 ### Step 4: Apply SAM to refine pseudo-labels.
 - Extract the image pairs with changes from the dataset and remove the unchanged image pairs.
-- Use the `CAM_label` script in the `step` folder to refine the pseudo-labels using the SAM (Segment Anything Model).
+- Use the `CAM_label.py` script in the `step` folder to refine the pseudo-labels using the SAM (Segment Anything Model).
 
 ### Step 5: Train the segmentation model.
 - Train a segmentation model using the refined pseudo-labels and the image pairs with changes as supervised data.
