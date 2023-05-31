@@ -4,7 +4,7 @@
 
 
 ## Prerequisite
-- Python 3.10, torch 1.13.0+cu117
+- Python >= 3.8, pytorch >= 1.8.0
 
 
 ## Usage (BCD)
