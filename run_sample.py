@@ -13,16 +13,17 @@ if __name__ == '__main__':
     # Environment
     # parser.add_argument("--num_workers", default=os.cpu_count()//2, type=int)
     parser.add_argument("--num_workers", default=12, type=int)
-    parser.add_argument("--CAM_root", default='dataset/BCD', type=str)
-    parser.add_argument("--SAM_A", default="./dataset/BCDDDDD/BCD_removeblank_split/train_seg/A/", type=str)
-    parser.add_argument("--SAM_B", default="./dataset/BCDDDDD/BCD_removeblank_split/train_seg/B/", type=str, 
+    parser.add_argument("--CAM_root", default='dataset/BCD', type=str, 
+                        help="Dataset floder. Please enter the folder names for T1,T2 images in the IMG_FOLDER_NAME_A and IMG_FOLDER_NAME_B sections of the dataloader")
+    parser.add_argument("--SAM_A", default="./dataset/BCD/train/A1/", type=str)
+    parser.add_argument("--SAM_B", default="./dataset/BCD/train/B1/", type=str, 
                         help = "Remove the unchanged pixel pairs in the predicted mask, and only use SAM for the changed pixel pairs")
     parser.add_argument("--SAM_weight", default="./pth/sam_vit_h_4b8939.pth", type=str, 
                         help = "sam_vit_h_4b8939.pth")
 
     # Dataset
-    parser.add_argument("--train_list", default="dataset/BCD/imagename.txt", type=str)
-    parser.add_argument("--val_list", default="dataset/BCD/imagename.txt", type=str)
+    parser.add_argument("--train_list", default="dataset/BCD/train.txt", type=str)
+    parser.add_argument("--val_list", default="dataset/BCD/val.txt", type=str)
 
     # Class Activation Map
     parser.add_argument("--cam_network", default="net.resnet50_cam", type=str)
@@ -35,9 +36,11 @@ if __name__ == '__main__':
     parser.add_argument("--cam_scales", default=(1.0, 0.5, 1.5, 2.0),
                         help="Multi-scale inferences")
     # ReCAM
-    parser.add_argument("--recam_num_epoches", default=7, type=int)
+    parser.add_argument("--recam_num_epoches", default=10, type=int)
     parser.add_argument("--recam_learning_rate", default=0.0005, type=float)
-    parser.add_argument("--recam_loss_weight", default=0.7, type=float)
+    parser.add_argument("--recam_loss_weight", default=0.85, type=float) # To a certain extent, you can control the balance of precision and recall of pseudo label generation, 
+                                                                        # the larger the value, the larger the recall, but the corresponding precision will be reduced.
+    
 
     # Mining Inter-pixel Relations
     parser.add_argument("--conf_fg_thres", default=0.35, type=float)
