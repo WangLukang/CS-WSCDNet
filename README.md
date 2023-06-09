@@ -22,7 +22,7 @@
 
 ### Step 4: Apply SAM to refine pseudo-labels.
 - Extract the image pairs with changes from the dataset and remove the unchanged image pairs.
-- Use the `CAM_label.py` script in the `step` folder to refine the pseudo-labels using the SAM (Segment Anything Model).
+- Use the `SAM_label.py` script in the `step` folder to refine the pseudo-labels using the SAM (Segment Anything Model).
 
 ### Step 5: Train the segmentation model.
 - Train a segmentation model using the refined pseudo-labels and the image pairs with changes as supervised data.
