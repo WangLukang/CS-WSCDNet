@@ -79,6 +79,15 @@ def SAM(args):
             mask = mask.astype(np.uint8)[0,:,:]
             mask[mask == 1] = 255
             mask_ = mask_ + mask
+        
+        #overlaps
+        count = np.sum(mask == mask_)
+        total_pixels = mask_.shape[0] * mask_.shape[1]
+        overlap = count / total_pixels
+        if overlap > 0.8:
+            pass
+        else:
+            mask_ = mask
 
         # 保存影像
         save_file_name = f'{file_name}'
