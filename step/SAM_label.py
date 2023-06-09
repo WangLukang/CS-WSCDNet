@@ -27,7 +27,7 @@ def get_all_target_bboxes(gray_img):
     target_boxes = []
     for cnt in contours:
         x, y, w, h = cv2.boundingRect(cnt)
-        if w < 20 or h < 20:
+        if w < 5 or h < 5:
             continue
         target_boxes.append((x, y, x+w, y+h))
     return target_boxes
