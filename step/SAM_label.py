@@ -84,7 +84,7 @@ def SAM(args):
         count = np.sum(mask == mask_)
         total_pixels = mask_.shape[0] * mask_.shape[1]
         overlap = count / total_pixels
-        if overlap > 0.8:
+        if overlap > 0.9:
             pass
         else:
             mask_ = mask
