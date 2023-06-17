@@ -59,7 +59,7 @@ def SAM(args):
             if len(input_box) == 0:
                 continue
 
-            image = imageB - imageA    
+            image = imageA - imageB + 127    
             samPredictor.set_image(image)
 
             input_box = torch.from_numpy(input_box)
