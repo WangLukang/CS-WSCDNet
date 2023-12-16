@@ -1,7 +1,7 @@
 # CS-WSCDNet
 
 ## Citation
-https://ieeexplore.ieee.org/document/10310006
+CS-WSCDNet: Class Activation Mapping and Segment Anything Model-Based Framework for Weakly Supervised Change Detection [https://ieeexplore.ieee.org/document/10310006]
 
 ## Prerequisite
 - Python >= 3.8, pytorch >= 1.8.0
