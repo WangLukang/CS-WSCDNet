@@ -1,7 +1,7 @@
 # CS-WSCDNet
 
 ## Citation
-
+https://ieeexplore.ieee.org/document/10310006
 
 ## Prerequisite
 - Python >= 3.8, pytorch >= 1.8.0
