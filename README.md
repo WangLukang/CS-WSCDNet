@@ -11,13 +11,12 @@ CS-WSCDNet: Class Activation Mapping and Segment Anything Model-Based Framework 
 ### Step 1: Prepare the dataset.
 - Download the BCD dataset from the [official website](https://study.rsgis.whu.edu.cn/pages/download/building_dataset.html).
 - Crop the downloaded images to a size of 256×256.
-- Use `npy.py` to generate the required training NPY and TXT files.
 
 ### Step 2: Train a CAM model.
 - Use the `train_cam.py` and `train_recam.py` scripts in the `step` folder to train a change Class Activation Map (CAM) model.
 
 ### Step 3: Convert CAM to initial pseudo-labels.
-- Use the `cam_to_ir_label.py` and `cam_to_label.py` scripts in the `step` folder to convert the CAM outputs to initial pseudo-labels.
+- Use the `make_recam`,`cam_to_ir_label.py` and `cam_to_label.py` scripts in the `step` folder to convert the CAM outputs to initial pseudo-labels.
 - DenseCRF is used for post-processing. Please note that the pseudo-labels might not be accurate if the class assignments are randomized. You can modify `cam_to_label.py` to assign the correct label as 255.
 
 ### Step 4: Apply SAM to refine pseudo-labels.
