@@ -74,7 +74,7 @@ def SAM(args):
 
             mask_ = np.zeros((256,256))
             for mask1 in masks:
-                mask1 = mask.cpu().numpy()
+                mask1 = mask1.cpu().numpy()
                 # mask1 = np.array(mask1)
                 mask1 = mask1.astype(np.uint8)[0,:,:]
                 mask1[mask1 == 1] = 255
