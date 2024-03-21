@@ -9,8 +9,9 @@ CS-WSCDNet: Class Activation Mapping and Segment Anything Model-Based Framework 
 
 ## Usage (BCD)
 ### Step 1: Prepare the dataset.
-- Download the BCD dataset from the [official website](https://study.rsgis.whu.edu.cn/pages/download/building_dataset.html).
-- Crop the downloaded images to a size of 256×256.
+- Option 1: Download the BCD dataset from the official website. After downloading, crop the images to a size of 256×256.
+- OR
+- Option 2: Download the BCD dataset from this link (Password: i8ec). This dataset is already cropped to a size of 256×256.
 
 ### Step 2: Train a CAM model.
 - Use the `train_cam.py` and `train_recam.py` scripts in the `step` folder to train a change Class Activation Map (CAM) model.
@@ -31,4 +32,5 @@ Please follow the steps provided above to use the CS-WSCDNet for building weakly
 
 ## Acknowledgment
 This code is borrowed from [IRN](https://github.com/jiwoon-ahn/irn), [ReCAM](https://github.com/zhaozhengChen/ReCAM) and [SAM](https://github.com/facebookresearch/segment-anything). Special thanks to Jiwoon Ahn, Zhaozheng Chen and Meta AI Research, FAIR for their contributions.
+Additionally, we would like to extend our gratitude to Shunping Ji, Shiqing Wei, and Meng Lu for providing the BCD dataset, which is featured in their paper, "Fully Convolutional Networks for Multisource Building Extraction From an Open Aerial and Satellite Imagery Data Set," published in IEEE Transactions on Geoscience and Remote Sensing, doi: 10.1109/TGRS.2018.2858817.
 
