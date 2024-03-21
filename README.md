@@ -10,7 +10,8 @@ CS-WSCDNet: Class Activation Mapping and Segment Anything Model-Based Framework 
 ## Usage (BCD)
 ### Step 1: Prepare the dataset.
 - Download the BCD dataset from the [official website](https://study.rsgis.whu.edu.cn/pages/download/building_dataset.html). After downloading, crop the images to a size of 256×256.
-
+- **OR**
+- **Option 2:** Download the BCD dataset directly from [this link](https://pan.baidu.com/s/1Cu6ycwkM-O8loXdzmvexiA?pwd=i8ec) (Password: i8ec). This version of the dataset is already cropped to a size of 256×256, and it includes [.npy] training labels.You can use this dataset to initially test the code and generate examples of pseudo-labels.
 
 ### Step 2: Train a CAM model.
 - Use the `train_cam.py` and `train_recam.py` scripts in the `step` folder to train a change Class Activation Map (CAM) model.
