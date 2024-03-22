@@ -31,6 +31,6 @@ CS-WSCDNet: Class Activation Mapping and Segment Anything Model-Based Framework 
 Please follow the steps provided above to use the CS-WSCDNet for building weakly supervised change detection on the BCD dataset.
 
 ## Acknowledgment
-This code is borrowed from [IRN](https://github.com/jiwoon-ahn/irn), [ReCAM](https://github.com/zhaozhengChen/ReCAM) and [SAM](https://github.com/facebookresearch/segment-anything). Special thanks to Jiwoon Ahn, Zhaozheng Chen and Meta AI Research, FAIR for their contributions.
-Additionally, we would like to extend our gratitude to Shunping Ji, Shiqing Wei, and Meng Lu for providing the BCD dataset, which is featured in their paper, "Fully Convolutional Networks for Multisource Building Extraction From an Open Aerial and Satellite Imagery Data Set," published in IEEE Transactions on Geoscience and Remote Sensing, doi: 10.1109/TGRS.2018.2858817.
+- This code is borrowed from [IRN](https://github.com/jiwoon-ahn/irn), [ReCAM](https://github.com/zhaozhengChen/ReCAM) and [SAM](https://github.com/facebookresearch/segment-anything). Special thanks to Jiwoon Ahn, Zhaozheng Chen and Meta AI Research, FAIR for their contributions.
+- Additionally, we would like to extend our gratitude to Shunping Ji, Shiqing Wei, and Meng Lu for providing the BCD dataset, which is featured in their paper, "Fully Convolutional Networks for Multisource Building Extraction From an Open Aerial and Satellite Imagery Data Set," published in IEEE Transactions on Geoscience and Remote Sensing, doi: 10.1109/TGRS.2018.2858817.
 
